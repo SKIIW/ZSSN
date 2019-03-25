@@ -81,7 +81,7 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
             console.log(req.body)
             User.findById(req.body.id).then(user => {
 
-                if (req.body.location) {
+                if (req.body.lastlocation) {
                     user.lastlocation.longitude = req.body.lastlocation.longitude;
                     user.lastlocation.latitude = req.body.lastlocation.latitude;
                     user.save()

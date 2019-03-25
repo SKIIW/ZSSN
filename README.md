@@ -25,31 +25,31 @@ method: POST (create)
 endpoint: /users
 input fields:
 
-	{
+{
 	name: Henrique,
 	age: 18,
 	gender: Male,
 	lastlocation:
-    		{
-      		longitude: -20.010101,
-		latitude: 20.010101
-    		},
+    	{
+      	longitude: -20.010101,
+	latitude: 20.010101
+    	},
 	inventory
-    		{
-     		 water: 10,
-		 food: 10,
-		 medication: 10,
-		 ammunition: 10
-    		}
-	}
+    	{
+     	water: 10,
+	food: 10,
+	medication: 10,
+	ammunition: 10
+    	}
+}
   
 Upon create Users, the system will set:
 
-	{
-		id: 5c987fb63df5394610e0f819,
-		inventoryLocked: false,
-		infectedReports: 0
-	}
+{
+	id: 5c987fb63df5394610e0f819,
+	inventoryLocked: false,
+	infectedReports: 0
+}
   
 Update survivor location
 
@@ -57,14 +57,14 @@ method: POST (update)
 endpoint: /users/laslocation
 input fields:
 
+{
 	id: 5c987fb63df5394610e0f819,
-	{
 	lastlocation:
-		{
-		longitude: -22.020202,
-		latitude: -25.050505
-		}
+	{
+	longitude: -22.020202,
+	latitude: -25.050505
 	}
+}
 	
 Flag survivor as infected
 
@@ -72,32 +72,32 @@ method: PUT (update)
 endpoint: /users/infected
 input fields:
 
-	{
-		id:"5c987fb63df5394610e0f819"
-	}
+{
+	id:"5c987fb63df5394610e0f819"
+}
   
 After flagging the survivor as infected, the system will increment in infectedReports:
 
-	{
-		name: Henrique,
-		age: 18,
-		id: 5c987fb63df5394610e0f819,
-		gender: Male,
-		lastlocation: 
-			{
-			longitude: -22.020202,
-			latitude: -25.050505
-			},
-		inventory:
-			{
-			water: 10,
-			food: 10,
-		 	medication: 10,
-		 	ammunition: 10,
-			},
-		inventoryLocked: false,
-		infectedReports: 1
-	}
+{
+	name: Henrique,
+	age: 18,
+	id: 5c987fb63df5394610e0f819,
+	gender: Male,
+	lastlocation: 
+		{
+		longitude: -22.020202,
+		latitude: -25.050505
+		},
+	inventory:
+		{
+		water: 10,
+		food: 10,
+		medication: 10,
+		ammunition: 10,
+		},
+	inventoryLocked: false,
+	infectedReports: 1
+}
   
 After 3 flags, the "inventoryLocked" will be set to true, starting that the survivor is infected.
 

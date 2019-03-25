@@ -40,7 +40,7 @@ input fields:
 		 food: 10,
 		 medication: 10,
 		 ammunition: 10
-    		},
+    		}
 	}
   
 Upon create Users, the system will set:

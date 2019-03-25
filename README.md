@@ -23,23 +23,25 @@ method: **POST** (create)
 endpoint: /users
 input fields:
 
-{
-	"name": "Henrique",
-	"age": 18,
-	"gender": "Male",
-	"lastlocation":
 	{
-		"longitude": -20.010101,
-		"latitude": 20.010101
-	},
-	"inventory":
-   	{
-     	"water": 10,
-		"food": 10,
-		"medication": 10,
-		"ammunition": 10
-    }
-}
+		"name": "Henrique",
+		"age": 18,
+		"gender": "M",
+		
+		"lastlocation":
+		{
+			"longitude": -20.010101,
+			"latitude": 20.010101
+		},
+		
+		"inventory":
+	   	{
+	     	"water": 10,
+			"food": 10,
+			"medication": 10,
+			"ammunition": 10
+	    }
+	}
 
 Upon create Users, the system will set:
 

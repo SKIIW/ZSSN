@@ -6,13 +6,13 @@
 - Postman
 
 ## System setup
-- Go to zssn folder
-- On terminal digit *npm install*
-- On Postman import the file *ZSSN.postman_collection.json*
+- Go to **ZSSN** folder
+- On terminal digit **npm install
+- On Postman import the file **ZSSN.postman_collection.json
 
 ## System start
-- Run the command mongod;
-- Run npm start;
+- Run the command **mongod
+- Run the command **npm start
 
 ## System follow-up
 After the system is started, open Postman to reach the endpoints.
@@ -21,7 +21,7 @@ After the system is started, open Postman to reach the endpoints.
 
 Add users to the database
 
-method: POST (create)
+method: **POST** (create)
 endpoint: /users
 input fields:
 
@@ -53,7 +53,7 @@ Upon create Users, the system will set:
   
 Update survivor location
 
-method: POST (update)
+method: **POST** (update)
 endpoint: /users/laslocation
 input fields:
 
@@ -68,7 +68,7 @@ input fields:
 	
 Flag survivor as infected
 
-method: PUT (update)
+method: **POST** (update)
 endpoint: /users/infected
 input fields:
 
@@ -103,7 +103,7 @@ After 3 flags, the "inventoryLocked" will be set to true, starting that the surv
 
 ### The users can be deleted through the DELETE request
 
-method: DEL
+method: **DELETE**
 endpoint: /users
 input fields:
 
@@ -113,7 +113,7 @@ input fields:
 	
 ### The users can be find by ID, just put the id after users/ in the URL
 
-method: GET
+method: **GET**
 endpoint: /users
 input fields:
 

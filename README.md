@@ -23,28 +23,30 @@ method: **POST** (create)
 endpoint: /users
 input fields:
 
+{
+	"name": "Henrique",
+	"age": "18",
+	"gender": "M",
+	
+	"lastlocation":
 	{
-		name: Henrique,
-		age: 18,
-		gender: Male,
-		lastlocation:
-	    		{
-	      		longitude: -20.010101,
-			latitude: 20.010101
-	    	},
-		inventory:
-	    		{
-	     		water: 10,
-			food: 10,
-			medication: 10,
-			ammunition: 10
-	    	}
-	}
+		"longitude": -20.010101,
+		"latitude": 20.010101
+	},
+	
+	"inventory":
+   	{
+     	"water": 10,
+		"food": 10,
+		"medication": 10,
+		"ammunition": 10
+    }
+}
   
 Upon create Users, the system will set:
 
 	{
-		id: 5c987fb63df5394610e0f819,
+		id: 5c98f9cee590f50e481fbc7e,
 		inventoryLocked: false,
 		infectedReports: 0,
 		status: "Survivor"
@@ -57,13 +59,13 @@ endpoint: /users/laslocation
 input fields:
 
 	{
-		id: 5c987fb63df5394610e0f819,
-		lastlocation:
-			{
-			longitude: -22.020202,
-			latitude: -25.050505
-		}
+	"_id": "5c98f9cee590f50e481fbc7e",
+	"lastlocation": 
+		{
+		"longitude": -50.010202,
+		"latitude": 50.010202
 	}
+}
 	
 Flag survivor as infected
 
@@ -72,7 +74,7 @@ endpoint: /users/infected
 input fields:
 
 	{
-		id:"5c987fb63df5394610e0f819"
+	"_id": "5c98f9cee590f50e481fbc7e"
 	}
   
 After flagging the survivor as infected, the system will increment in infectedReports:
@@ -80,12 +82,12 @@ After flagging the survivor as infected, the system will increment in infectedRe
 	{
 		name: Henrique,
 		age: 18,
-		id: 5c987fb63df5394610e0f819,
+		id: 5c98f9cee590f50e481fbc7e,
 		gender: Male,
 		lastlocation: 
 			{
-			longitude: -22.020202,
-			latitude: -25.050505
+			longitude: -50.010202,
+			latitude: 50.010202
 		},
 		inventory:
 			{
@@ -108,7 +110,7 @@ endpoint: /users
 input fields:
 
 	{
-		id: 5c987fb63df5394610e0f819
+	"_id": "5c98f9cee590f50e481fbc7e"
 	}
 	
 ### The users can be find by ID, just put the id after users/ in the URL

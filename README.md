@@ -7,7 +7,8 @@
 
 ## System setup
 - Go to zssn folder
-- npm install
+- On terminal digit *npm install*
+- On Postman import the file *ZSSN.postman_collection.json*
 
 ## System start
 - Run the command mongod;

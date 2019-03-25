@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
             lastlocation:
             {
                 longitude: { type: Number, required: true },
-                latitude: { type: Number, required: true },
+                latitude: { type: Number, required: true }
             },
 
             inventoryLocked: { type: Boolean, default: false},
@@ -43,7 +43,8 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
             let user = new User(req.body)
             user.save().then(user => {
                 resp.json(user)
-            }).catch(error => {
+            }).catch(error => 
+			{
                 resp.status(400)
                 resp.json({ message: error.message })
                 return next()
@@ -78,12 +79,12 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
         // Update Last Location
         server.post('/users/lastlocation', (req, resp, next) => {
             console.log('POST Update LastLocation')
-            console.log(req.body)
-            User.findById(req.body.id).then(user => {
+            console.log(req.body);
+            User.findById(req.body._id).then(user => {
 
-                if (req.body.lastlocation) {
-                    user.lastlocation.longitude = req.body.lastlocation.longitude;
-                    user.lastlocation.latitude = req.body.lastlocation.latitude;
+                if (req.body.lastlocation && user.infectedReports < 3) {
+                    user.lastlocation.longitude = req.body.lastlocation.longitude
+                    user.lastlocation.latitude = req.body.lastlocation.latitude
                     user.save()
                     resp.json(user)
                 }
@@ -99,7 +100,8 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
         server.post('/users/infected', (req, resp, next) => {
             console.log('POST Report infected User')
             console.log(req.body)
-            User.findById(req.body.id).then(user => {
+            User.findById(req.body._id).then(user => {
+				
                 user.infectedReports++
 
                 if (user.infectedReports >= 2) {

@@ -82,11 +82,16 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
             console.log(req.body);
             User.findById(req.body._id).then(user => {
 
-                if (req.body.lastlocation && user.infectedReports < 3) {
-                    user.lastlocation.longitude = req.body.lastlocation.longitude
-                    user.lastlocation.latitude = req.body.lastlocation.latitude
-                    user.save()
-                    resp.json(user)
+                if (req.body.lastlocation) {
+                    if(user.infectedReports < 3){
+                        user.lastlocation.longitude = req.body.lastlocation.longitude
+                        user.lastlocation.latitude = req.body.lastlocation.latitude
+                        user.save()
+                        resp.json(user)
+                    }else{
+                        resp.status(404)
+                        resp.json({ message: 'user is infected' })
+                    }
                 }
                 else {
                     resp.status(404)

@@ -25,14 +25,14 @@ method: POST (create)
 endpoint: /users
 input fields:
 
-{
+	{
 	name: Henrique,
 	age: 18,
 	gender: Male,
 	lastlocation:
     		{
-      		longitude: -20.000000,
-		latitude: 20.000000
+      		longitude: -20.010101,
+		latitude: 20.010101
     		},
 	inventory
     		{

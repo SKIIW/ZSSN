@@ -48,7 +48,8 @@ Upon create Users, the system will set:
 	{
 		id: 5c987fb63df5394610e0f819,
 		inventoryLocked: false,
-		infectedReports: 0
+		infectedReports: 0,
+		status: "Survivor"
 	}
   
 Update survivor location
@@ -99,7 +100,8 @@ After flagging the survivor as infected, the system will increment in infectedRe
 		infectedReports: 1
 	}
   
-After 3 flags, the "inventoryLocked" will be set to true, starting that the survivor is infected.
+- If the user would have 2 infectedReports your status will be changed to "Dangerous"
+- After 3 infectedReports, the "inventoryLocked" will be set to true and your status will be changed to "Dangerous".
 
 ### The users can be deleted through the DELETE request
 

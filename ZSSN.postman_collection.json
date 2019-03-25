@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "a7d62452-a42d-4fe1-ad4e-960ef1ddcd8e",
 		"name": "ZSSN",
-		"description": "This API can Create Users, Find all of them in a list or a single one by ID, Update the lastlocation, Report the Users are Infected and Delete the Users by ID." 
+		"description": "This API can Create Users, Find all of them in a list or a single one by ID, Update the lastlocation, Report the Users are Infected and Delete the Users by ID.", 
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

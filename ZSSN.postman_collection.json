@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "a7d62452-a42d-4fe1-ad4e-960ef1ddcd8e",
+		"_postman_id": "87861d2c-7c4a-4a77-846f-f20e311fc53b",
 		"name": "ZSSN",
-		"description": "This API can Create Users, Find all of them in a list or a single one by ID, Update the lastlocation, Report the Users are Infected and Delete the Users by ID.", 
+		"description": "This API can Create Users, Find all of them in a list or a single one by ID, Update the lastlocation, Report the Users are Infected and Delete the Users by ID.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -20,17 +20,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\":\n\t\"location\":{\n\t\t\"longitude\": 1,\n\t\t\"latitude\":2\n\t}\n}"
+					"raw": "{\n\t\"name\": \"Henrique\",\n\t\"age\": 18,\n\t\"gender\": \"M\",\n\t\n\t\"lastlocation\":\n\t{\n\t\t\"longitude\": -20.010101,\n\t\t\"latitude\": 20.010101\n\t},\n\t\n\t\"inventory\":\n   \t{\n     \t\"water\": 10,\n\t\t\"food\": 10,\n\t\t\"medication\": 10,\n\t\t\"ammunition\": 10\n    }\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/users/location",
+					"raw": "localhost:3000/users",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"users",
-						"location"
+						"users"
 					]
 				},
 				"description": "Create a User"
@@ -69,8 +68,8 @@
 						}
 					},
 					"code": 200,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": ""
 				}
@@ -84,23 +83,23 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
+						"value": "application/json",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"_id\": \"5c97c90a97b9284018aa0099\",\n\tlocation:{\n\tlongitude: 2,\n\tlatitude: 1\n\t}\n}"
+					"raw": "{\n\t\"_id\": \"5c98f9cee590f50e481fbc7e\",\n\t\"lastlocation\": \n\t{\n        \"longitude\": -50.010202,\n        \"latitude\": 50.010202\n\t}\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/users/location",
+					"raw": "localhost:3000/users/lastlocation",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"users",
-						"location"
+						"lastlocation"
 					]
 				},
 				"description": "Update Last Location"
@@ -108,7 +107,41 @@
 			"response": []
 		},
 		{
+			"name": "Set Report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"_id\":\"5c98f9cee590f50e481fbc7e\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/infected",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"infected"
+					]
+				},
+				"description": "Increment one report to User ID"
+			},
+			"response": []
+		},
+		{
 			"name": "Users List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -117,7 +150,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
 				},
 				"description": "List all the Users"
 			},
@@ -133,41 +173,74 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:3000/users/5c98f9cee590f50e481fbc7e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"5c98f9cee590f50e481fbc7e"
+					]
 				},
 				"description": "Find a single User by ID in URL"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Find User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/users/5c98f9cee590f50e481fbc7e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5c98f9cee590f50e481fbc7e"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
-			"name": "Set Report",
+			"name": "Delete Users",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\"id\": \"5c98f9cee590f50e481fbc7e\"\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
 				},
-				"description": "Increment one report to User ID"
-			},
-			"response": []
-		},
-		{
-			"name": "Delete User",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": ""
-				},
-				"description": "Delete User"
+				"description": "Delete User by ID"
 			},
 			"response": []
 		}

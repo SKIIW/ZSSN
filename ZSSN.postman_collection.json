@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "a7d62452-a42d-4fe1-ad4e-960ef1ddcd8e",
+		"name": "ZSSN",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\n\t\"location\":{\n\t\t\"longitude\": 1,\n\t\t\"latitude\":2\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/location",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"location"
+					]
+				},
+				"description": "Lista todos os usuarios do banco"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?retryWrites=true",
+							"protocol": "mongodb+srv",
+							"host": [
+								"cluster0-u8rhc",
+								"mongodb",
+								"net"
+							],
+							"auth": {
+								"user": "skiiw",
+								"password": "second75"
+							},
+							"path": [
+								"test"
+							],
+							"query": [
+								{
+									"key": "retryWrites",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Last Location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5c97c90a97b9284018aa0099\",\n\tlocation:{\n\tlongitude: 2,\n\tlatitude: 1\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users/location",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"location"
+					]
+				},
+				"description": "Update Last Location"
+			},
+			"response": []
+		},
+		{
+			"name": "Users List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "Lista todos os usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "Delete User"
+			},
+			"response": []
+		}
+	]
+}

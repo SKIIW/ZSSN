@@ -1,17 +1,17 @@
 # ZSSN - Zombie Survival Social Network
 
-##System setup##
+## System setup
 npm install
 
-##System start##
+## System start
 On a Terminal, run the command mongod;
 Go to the zssn folder and open it in a Terminal;
 Run npm start;
 
-##System follow-up##
+## System follow-up
 After the system is started, open Postman to reach the endpoints.
 
-##System endpoints##
+## System endpoints
 
 Add users to the database
 

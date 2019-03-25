@@ -100,7 +100,7 @@ After flagging the survivor as infected, the system will increment in infectedRe
   
 After 3 flags, the "inventoryLocked" will be set to true, starting that the survivor is infected.
 
-The users can be deleted through the DELETE request
+### The users can be deleted through the DELETE request
 
 method: DEL
 endpoint: /users
@@ -110,7 +110,7 @@ input fields:
 	id: 5c987fb63df5394610e0f819
 }
 
-The users can be find by ID, just put the id after users/ in the URL
+### The users can be find by ID, just put the id after users/ in the URL
 
 method: GET
 endpoint: /users

@@ -124,7 +124,7 @@
 			"response": []
 		},
 		{
-			"name": "Get users",
+			"name": "Find User",
 			"request": {
 				"method": "GET",
 				"header": [],

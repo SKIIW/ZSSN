@@ -4,9 +4,9 @@
 npm install
 
 ## System start
-On a Terminal, run the command mongod;
-Go to the zssn folder and open it in a Terminal;
-Run npm start;
+### On a Terminal, run the command mongod;
+### Go to the zssn folder and open it in a Terminal;
+### Run npm start;
 
 ## System follow-up
 After the system is started, open Postman to reach the endpoints.

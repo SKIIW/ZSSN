@@ -25,7 +25,7 @@ input fields:
 
 {
 	"name": "Henrique",
-	"age": "18",
+	"age": 18,
 	"gender": "M",
 	
 	"lastlocation":

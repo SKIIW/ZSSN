@@ -6,7 +6,6 @@
 - Postman
 
 ## System setup
-- Go to **ZSSN** folder
 - On terminal digit **npm install**
 - On Postman import the file **ZSSN.postman_collection.json**
 

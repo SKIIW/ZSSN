@@ -26,8 +26,8 @@ input fields:
 		gender: Male,
 		lastLocation:
     {
-      longitude: -20.000000,
-		  latitude: 20.000000
+      		longitude: -20.000000,
+		latitude: 20.000000
     },
 		inventory
     {

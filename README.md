@@ -119,7 +119,6 @@ input fields:
 
 #### URL: localhost:3000/users/5c987fb63df5394610e0f819
 
-## development
-
+## Development
 - Trade itens
 - Porcentage Users: infected and non infected

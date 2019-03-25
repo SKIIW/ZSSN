@@ -80,25 +80,25 @@ input fields:
 After flagging the survivor as infected, the system will increment in infectedReports:
 
 	{
-		name: Henrique,
-		age: 18,
-		id: 5c98f9cee590f50e481fbc7e,
-		gender: Male,
-		lastlocation: 
-			{
-			longitude: -50.010202,
-			latitude: 50.010202
-		},
-		inventory:
-			{
-			water: 10,
-			food: 10,
-			medication: 10,
-			ammunition: 10,
-		},
-		inventoryLocked: false,
-		infectedReports: 1
-	}
+	    "status": "Survivor",
+	    "infectedReports": 1,
+	    "inventoryLocked": false,
+	    "_id": "5c98f9cee590f50e481fbc7e",
+	    "name": "Henrique",
+	    "age": 18,
+	    "gender": "M",
+	    "lastlocation": {
+		"longitude": -20.010101,
+		"latitude": 20.010101
+	    },
+	    "inventory": {
+		"water": 10,
+		"food": 10,
+		"medication": 10,
+		"ammunition": 10
+	    },
+	    "__v": 0
+}
   
 - If the user would have 2 infectedReports your status will be changed to "Dangerous"
 - After 3 infectedReports, the "inventoryLocked" will be set to true and your status will be changed to "Dangerous".

@@ -6,7 +6,7 @@
 - Postman
 
 ## System setup
-- On Termilnal **cd /ZSSN-master**
+- On Terminal **cd /ZSSN-master**
 - On Terminal digit **npm install**
 - On **Postman** import the file **ZSSN.postman_collection.json**
 

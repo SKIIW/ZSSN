@@ -11,7 +11,6 @@
 - On Postman import the file **ZSSN.postman_collection.json**
 
 ## System start
-- Run the command **mongod**
 - Run the command **npm start**
 
 ## System follow-up

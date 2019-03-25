@@ -1,12 +1,16 @@
 # ZSSN - Zombie Survival Social Network
 
+## System Dependencies
+- Node.js
+- Mongodb
+- Postman
+
 ## System setup
 - Go to zssn folder
 - npm install
 
 ## System start
-- On a Terminal, run the command mongod;
-- Go to the zssn folder;
+- Run the command mongod;
 - Run npm start;
 
 ## System follow-up
@@ -20,30 +24,30 @@ method: POST (create)
 endpoint: /users
 input fields:
 
-	{
-		name: Henrique,
-		age: 18,
-		gender: Male,
-		lastLocation:
-    {
+{
+	name: Henrique,
+	age: 18,
+	gender: Male,
+	lastlocation:
+    		{
       		longitude: -20.000000,
 		latitude: 20.000000
-    },
-		inventory
-    {
-      water: 10,
-		  food: 10,
-		  medication: 10,
-		  ammunition: 10
-    },
+    	},
+	inventory
+    		{
+     		 water: 10,
+		 food: 10,
+		 medication: 10,
+		 ammunition: 10
+    	},
 	}
   
 Upon create Users, the system will set:
 
 	{
-		"id": 5c987fb63df5394610e0f819,
-		"inventoryLocked": false,
-		"infectedReports": 0
+		id: 5c987fb63df5394610e0f819,
+		inventoryLocked: false,
+		infectedReports: 0
 	}
   
 Update survivor location
@@ -52,11 +56,15 @@ method: POST (update)
 endpoint: /users/laslocation
 input fields:
 
+	id: 5c987fb63df5394610e0f819,
 	{
-		name: Arthur,
-		lastLocation.longitude: -16.682199,
-		lastLocation.latitude: -49.2795521,
+	lastlocation:
+		{
+		longitude: -22.020202,
+		latitude: -25.050505
 	}
+	}
+	
 Flag survivor as infected
 
 method: PUT (update)
@@ -70,16 +78,42 @@ input fields:
 After flagging the survivor as infected, the system will increment in infectedReports:
 
 	{
-		name: "Henrique",
+		name: Henrique,
 		age: 18,
-		gender: "Male",
-		"lastLocation": {
-			"longitude": -20.010101,
-			"latitude": 20.010101
+		id: 5c987fb63df5394610e0f819,
+		gender: Male,
+		lastlocation: 
+			{
+			longitude: -22.020202,
+			latitude: -25.050505
 		},
-		"inventory": ["Water", "Food", "Ammunition"],
-		"inventoryLocked": false,
-		"infectedReports": 1
+		inventory:
+			{
+			water: 10,
+			food: 10,
+		 	medication: 10,
+		 	ammunition: 10,
+		},
+		inventoryLocked: false,
+		infectedReports: 1
 	}
   
 After 3 flags, the "inventoryLocked" will be set to true, starting that the survivor is infected.
+
+The users can be deleted through the DELETE request
+
+method: DEL
+endpoint: /users
+input fields:
+
+{
+	id: 5c987fb63df5394610e0f819
+}
+
+The users can be find by ID, just put the id after users/ in the URL
+
+method: GET
+endpoint: /users
+input fields:
+
+URL: localhost:3000/users/5c987fb63df5394610e0f819

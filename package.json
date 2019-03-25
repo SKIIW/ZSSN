@@ -2,7 +2,7 @@
   "name": "zssn",
   "version": "1.0.0",
   "description": "Zombie System Social Network",
-  "main": "routes.js",
+  "main": "index.js",
   "mongooseKey": "6761e225-aff3-4b0b-ae67-451a57ec86ec",
   "scripts": {
     "dev": "nodemon src/index.js"

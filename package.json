@@ -5,7 +5,7 @@
   "main": "index.js",
   "mongooseKey": "6761e225-aff3-4b0b-ae67-451a57ec86ec",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],

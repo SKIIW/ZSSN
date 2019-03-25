@@ -1,5 +1,9 @@
 # ZSSN
 
+NPM INSTALL
+NPM RUN DEV
+REQUEST FILE POSTMAN
+
 System endpoints
 
 Add users to the database

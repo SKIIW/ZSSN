@@ -26,14 +26,12 @@ input fields:
 {
 	"name": "Henrique",
 	"age": 18,
-	"gender": "M",
-	
+	"gender": "Male",
 	"lastlocation":
 	{
 		"longitude": -20.010101,
 		"latitude": 20.010101
 	},
-	
 	"inventory":
    	{
      	"water": 10,
@@ -42,7 +40,7 @@ input fields:
 		"ammunition": 10
     }
 }
-  
+
 Upon create Users, the system will set:
 
 	{
@@ -86,7 +84,7 @@ After flagging the survivor as infected, the system will increment in infectedRe
 	    "_id": "5c98f9cee590f50e481fbc7e",
 	    "name": "Henrique",
 	    "age": 18,
-	    "gender": "M",
+	    "gender": "Male",
 	    "lastlocation": {
 		"longitude": -20.010101,
 		"latitude": 20.010101

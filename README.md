@@ -56,7 +56,7 @@ Upon create Users, the system will set:
 		status: "Survivor"
 	}
   
-Update survivor location
+Update survivor location if user ins't infected
 
 method: **POST** (update)
 endpoint: /users/laslocation
@@ -71,7 +71,7 @@ input fields:
 	}
 }
 	
-Flag survivor as infected
+Report survivor as infected
 
 method: **POST** (update)
 endpoint: /users/infected
@@ -81,7 +81,7 @@ input fields:
 	"_id": "5c98f9cee590f50e481fbc7e"
 	}
   
-After flagging the survivor as infected, the system will increment in infectedReports:
+After Report the survivor as infected, the system will increment in infectedReports:
 
 	{
 	    "status": "Survivor",

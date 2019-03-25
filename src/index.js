@@ -137,44 +137,6 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
             })
         })
 
-// readPercentageOfNonSurvivors
-app.route('/survivors/infected')
-		.get(survivorController.readPercentageOfNonSurvivorsController);
-exports.readPercentageOfNonSurvivors = function(req, res) {
-	Survivor.count({}, function(err, totalCount) {
-		if (err) res.send(err);
-		var totalRegistered = totalCount;
-
-		Survivor.count({inventoryLocked: true}, function (err, infectedCount) {
-			if (err) res.send(err);
-			var infectedRegistered = infectedCount;
-
-			percentageOfInfected = ((infectedRegistered / totalRegistered) * 100 ).toFixed(2) + "%";
-
-			res.json(percentageOfInfected);
-		});
-	});
-};
-
-// readPercentageOfSurvivors
-app.route('/survivors/noninfected')
-		.get(survivorController.readPercentageOfSurvivorsController);
-exports.readPercentageOfSurvivors = function(req, res) {
-	Survivor.count({}, function(err, totalCount) {
-		if (err) res.send(err);
-		var totalRegistered = totalCount;
-
-		Survivor.count({inventoryLocked: false}, function (err, nonInfectedCount) {
-			if (err) res.send(err);
-			var nonInfectedRegistered = nonInfectedCount;
-
-			percentageOfNonInfected = ((nonInfectedRegistered / totalRegistered) * 100 ).toFixed(2) + "%";
-
-			res.json(percentageOfNonInfected);
-		});
-	});
-};
-
         // Server start and message logging
         server.listen(3000, () => {
             console.log('Api listening on 3000');

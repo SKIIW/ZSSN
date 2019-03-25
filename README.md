@@ -21,7 +21,7 @@ After the system is started, open Postman to reach the endpoints.
 
 ## System endpoints
 
-### - Add users to the database
+#### Add users to the database
 
 method: **POST** (create)
 endpoint: /users
@@ -56,7 +56,7 @@ Upon create Users, the system will set:
 		status: "Survivor"
 	}
   
-### - Update survivor location if user ins't infected
+#### Update survivor location if user ins't infected
 
 method: **POST** (update)
 endpoint: /users/laslocation
@@ -71,7 +71,7 @@ input fields:
 	}
 }
 	
-### - Report survivor as infected
+#### Report survivor as infected
 
 method: **POST** (update)
 endpoint: /users/infected
@@ -107,7 +107,7 @@ After Report the survivor as infected, the system will increment in infectedRepo
 - If the user would have 2 infectedReports your status will be changed to "Dangerous"
 - After 3 infectedReports, the "inventoryLocked" will be set to true and your status will be changed to "Dangerous".
 
-### - The users can be deleted through the DELETE request
+#### The users can be deleted through the DELETE request
 
 method: **DELETE**
 endpoint: /users
@@ -117,7 +117,7 @@ input fields:
 	"_id": "5c98f9cee590f50e481fbc7e"
 	}
 	
-### - The users can be find by ID, just put the id after users/ in the URL
+#### The users can be find by ID, just put the id after users/ in the URL
 
 method: **GET**
 endpoint: /users

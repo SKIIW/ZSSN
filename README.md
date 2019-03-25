@@ -32,7 +32,7 @@ input fields:
 	      		longitude: -20.010101,
 			latitude: 20.010101
 	    	},
-		inventory
+		inventory:
 	    		{
 	     		water: 10,
 			food: 10,

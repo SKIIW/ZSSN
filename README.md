@@ -11,8 +11,8 @@
 - On **Postman** import the file **ZSSN.postman_collection.json**
 
 ## System start
-- Run the command **npm start**
-- Make your requests on **Postman**
+- **Run** the command **npm start**
+- **Send** your requests on **Postman**
 
 ## System follow-up
 After the system is started, open Postman to reach the endpoints.

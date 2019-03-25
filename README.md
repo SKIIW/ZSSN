@@ -7,12 +7,12 @@
 
 ## System setup
 - Go to **ZSSN** folder
-- On terminal digit **npm install
-- On Postman import the file **ZSSN.postman_collection.json
+- On terminal digit **npm install**
+- On Postman import the file **ZSSN.postman_collection.json**
 
 ## System start
-- Run the command **mongod
-- Run the command **npm start
+- Run the command **mongod**
+- Run the command **npm start**
 
 ## System follow-up
 After the system is started, open Postman to reach the endpoints.

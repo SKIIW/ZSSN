@@ -61,9 +61,9 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
         })
 
         // Find User ID
-        server.get('/users/:name', (req, resp, next) => {
+        server.get('/users/:id', (req, resp, next) => {
             console.log('GET Find User ID');
-            User.findById(req.params.name).then(user => {
+            User.findById(req.params.id).then(user => {
                 if (user) {
                     resp.json(user)
                 }
@@ -79,7 +79,7 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
         server.post('/users/lastlocation', (req, resp, next) => {
             console.log('POST Update LastLocation')
             console.log(req.body)
-            User.findById(req.body.name).then(user => {
+            User.findById(req.body.id).then(user => {
 
                 if (req.body.location) {
                     user.lastlocation.longitude = req.body.lastlocation.longitude;
@@ -99,7 +99,7 @@ mongoose.connect('mongodb+srv://skiiw:second75@cluster0-u8rhc.mongodb.net/test?r
         server.post('/users/infected', (req, resp, next) => {
             console.log('POST Report infected User')
             console.log(req.body)
-            User.findById(req.body.name).then(user => {
+            User.findById(req.body.id).then(user => {
                 user.infectedReports++
 
                 if (user.infectedReports >= 2) {

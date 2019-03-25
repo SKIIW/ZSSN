@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "a7d62452-a42d-4fe1-ad4e-960ef1ddcd8e",
 		"name": "ZSSN",
-		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"description": "This API can Create Users, Find all of them in a list or a single one by ID, Update the lastlocation, Report the Users are Infected and Delete the Users by ID." 
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -33,7 +33,7 @@
 						"location"
 					]
 				},
-				"description": "Lista todos os usuarios do banco"
+				"description": "Create a User"
 			},
 			"response": [
 				{
@@ -119,7 +119,7 @@
 				"url": {
 					"raw": ""
 				},
-				"description": "Lista todos os usuarios"
+				"description": "List all the Users"
 			},
 			"response": []
 		},
@@ -134,7 +134,8 @@
 				},
 				"url": {
 					"raw": ""
-				}
+				},
+				"description": "Find a single User by ID in URL"
 			},
 			"response": []
 		},
@@ -149,7 +150,8 @@
 				},
 				"url": {
 					"raw": ""
-				}
+				},
+				"description": "Increment one report to User ID"
 			},
 			"response": []
 		},

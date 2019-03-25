@@ -41,6 +41,7 @@ input fields:
 Upon create Users, the system will set:
 
 	{
+		"id": 5c987fb63df5394610e0f819,
 		"inventoryLocked": false,
 		"infectedReports": 0
 	}
@@ -59,11 +60,11 @@ input fields:
 Flag survivor as infected
 
 method: PUT (update)
-endpoint: /flag/infection
+endpoint: /users/infected
 input fields:
 
 	{
-		name: Henrique
+		id:"5c987fb63df5394610e0f819"
 	}
   
 After flagging the survivor as infected, the system will increment in infectedReports:

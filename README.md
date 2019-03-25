@@ -6,11 +6,13 @@
 - Postman
 
 ## System setup
-- On terminal digit **npm install**
-- On Postman import the file **ZSSN.postman_collection.json**
+- On Termilnal **cd /ZSSN-master**
+- On Terminal digit **npm install**
+- On **Postman** import the file **ZSSN.postman_collection.json**
 
 ## System start
 - Run the command **npm start**
+- Make your requests on **Postman**
 
 ## System follow-up
 After the system is started, open Postman to reach the endpoints.

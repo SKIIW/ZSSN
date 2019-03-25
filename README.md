@@ -32,14 +32,14 @@ input fields:
     		{
       		longitude: -20.000000,
 		latitude: 20.000000
-    	},
+    		},
 	inventory
     		{
      		 water: 10,
 		 food: 10,
 		 medication: 10,
 		 ammunition: 10
-    	},
+    		},
 	}
   
 Upon create Users, the system will set:
@@ -62,7 +62,7 @@ input fields:
 		{
 		longitude: -22.020202,
 		latitude: -25.050505
-	}
+		}
 	}
 	
 Flag survivor as infected
@@ -86,14 +86,14 @@ After flagging the survivor as infected, the system will increment in infectedRe
 			{
 			longitude: -22.020202,
 			latitude: -25.050505
-		},
+			},
 		inventory:
 			{
 			water: 10,
 			food: 10,
 		 	medication: 10,
 		 	ammunition: 10,
-		},
+			},
 		inventoryLocked: false,
 		infectedReports: 1
 	}

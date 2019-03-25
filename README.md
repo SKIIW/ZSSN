@@ -116,6 +116,6 @@ input fields:
 method: GET
 endpoint: /users
 input fields:
-	{
-		URL: localhost:3000/users/5c987fb63df5394610e0f819
-	}
+
+#### URL: localhost:3000/users/5c987fb63df5394610e0f819
+

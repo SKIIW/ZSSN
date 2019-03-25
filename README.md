@@ -13,6 +13,8 @@
 ## System start
 - **Run** the command **npm start**
 - **Send** your requests on **Postman**
+### Dev Start
+- **npm run dev** 
 
 ## System follow-up
 After the system is started, open Postman to reach the endpoints.

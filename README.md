@@ -40,7 +40,7 @@ input fields:
 		
 		"inventory":
 	   	{
-	     	"water": 10,
+	     		"water": 10,
 			"food": 10,
 			"medication": 10,
 			"ammunition": 10

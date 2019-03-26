@@ -30,7 +30,7 @@ input fields:
 	{
 		"name": "Henrique",
 		"age": 18,
-		"gender": "M",
+		"gender": "Male",
 		
 		"lastlocation":
 		{
